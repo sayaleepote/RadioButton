@@ -1,5 +1,4 @@
 # RadioButton
-Radio Button for iOS
 
 This is a customised UIButton component which would behave like radio button with a button title.
 
