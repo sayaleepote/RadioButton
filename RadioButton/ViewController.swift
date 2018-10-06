@@ -10,9 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var buttons : [RadioButton]?
+    
+    @IBOutlet weak var violet: RadioButton!
+    @IBOutlet weak var indigo: RadioButton!
+    @IBOutlet weak var blue: RadioButton!
+    @IBOutlet weak var green: RadioButton!
+    @IBOutlet weak var yellow: RadioButton!
+    @IBOutlet weak var orange: RadioButton!
+    @IBOutlet weak var red: RadioButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        buttons = [violet, indigo, blue, green, yellow, orange, red]
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,5 +32,9 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func radioButtonTapped(_ sender: RadioButton) {
+        buttons?.forEach({ $0.isSelected = false})
+        sender.isSelected = true
+    }
 }
 
